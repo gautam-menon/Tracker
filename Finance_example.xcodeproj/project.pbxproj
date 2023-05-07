@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71897A8294B2D31006FBA27 /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71897A7294B2D31006FBA27 /* Widgets.swift */; };
+		C724BCB22966FA92002BE7FC /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C724BCB12966FA92002BE7FC /* AppModel.swift */; };
 		C745A0BD29237FED000FD8D7 /* Finance_exampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745A0BC29237FED000FD8D7 /* Finance_exampleApp.swift */; };
 		C745A0BF29237FED000FD8D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745A0BE29237FED000FD8D7 /* ContentView.swift */; };
 		C745A0C129237FF1000FD8D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C745A0C029237FF1000FD8D7 /* Assets.xcassets */; };
@@ -15,13 +17,20 @@
 		C779832C2935E39800AEDD24 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C779832B2935E39800AEDD24 /* Constants.swift */; };
 		C779832E2935EC4400AEDD24 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C779832D2935EC4400AEDD24 /* TransactionModel.swift */; };
 		C77983302936142000AEDD24 /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C779832F2936142000AEDD24 /* AddTransactionView.swift */; };
+		C78A574D29911C66009CEAA6 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A574C29911C65009CEAA6 /* Notes.swift */; };
+		C78A574F29911DDE009CEAA6 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A574E29911DDE009CEAA6 /* NotesModel.swift */; };
+		C78A575129912BEF009CEAA6 /* CreateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A575029912BEF009CEAA6 /* CreateNote.swift */; };
 		C7A002EC29432AFA00CE9DDA /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A002EB29432AFA00CE9DDA /* TransactionView.swift */; };
 		C7ABFE5529446A0500FFED7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7ABFE5429446A0500FFED7F /* GoogleService-Info.plist */; };
 		C7ABFE5A2944732B00FFED7F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C7ABFE592944732B00FFED7F /* FirebaseFirestore */; };
 		C7ABFE5C2944957800FFED7F /* FirebaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABFE5B2944957800FFED7F /* FirebaseServices.swift */; };
+		C7B02B632956DE2200DC1DB9 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B02B622956DE2200DC1DB9 /* AppStorage.swift */; };
+		C7B02B652956DF8F00DC1DB9 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B02B642956DF8F00DC1DB9 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71897A7294B2D31006FBA27 /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
+		C724BCB12966FA92002BE7FC /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		C745A0B929237FED000FD8D7 /* Finance_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finance_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C745A0BC29237FED000FD8D7 /* Finance_exampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance_exampleApp.swift; sourceTree = "<group>"; };
 		C745A0BE29237FED000FD8D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,9 +40,14 @@
 		C779832B2935E39800AEDD24 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C779832D2935EC4400AEDD24 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		C779832F2936142000AEDD24 /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		C78A574C29911C65009CEAA6 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		C78A574E29911DDE009CEAA6 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
+		C78A575029912BEF009CEAA6 /* CreateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNote.swift; sourceTree = "<group>"; };
 		C7A002EB29432AFA00CE9DDA /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		C7ABFE5429446A0500FFED7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7ABFE5B2944957800FFED7F /* FirebaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServices.swift; sourceTree = "<group>"; };
+		C7B02B622956DE2200DC1DB9 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
+		C7B02B642956DF8F00DC1DB9 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +83,18 @@
 			isa = PBXGroup;
 			children = (
 				C745A0BC29237FED000FD8D7 /* Finance_exampleApp.swift */,
+				C724BCB12966FA92002BE7FC /* AppModel.swift */,
+				C7B02B622956DE2200DC1DB9 /* AppStorage.swift */,
+				C7B02B642956DF8F00DC1DB9 /* Theme.swift */,
 				C7A002EB29432AFA00CE9DDA /* TransactionView.swift */,
 				C745A0BE29237FED000FD8D7 /* ContentView.swift */,
+				C78A574C29911C65009CEAA6 /* Notes.swift */,
+				C78A575029912BEF009CEAA6 /* CreateNote.swift */,
+				C78A574E29911DDE009CEAA6 /* NotesModel.swift */,
 				C779832F2936142000AEDD24 /* AddTransactionView.swift */,
 				C76EDCF3294A05560056030E /* PayBillView.swift */,
 				C779832B2935E39800AEDD24 /* Constants.swift */,
+				C71897A7294B2D31006FBA27 /* Widgets.swift */,
 				C779832D2935EC4400AEDD24 /* TransactionModel.swift */,
 				C7ABFE5B2944957800FFED7F /* FirebaseServices.swift */,
 				C745A0C029237FF1000FD8D7 /* Assets.xcassets */,
@@ -168,13 +189,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C779832E2935EC4400AEDD24 /* TransactionModel.swift in Sources */,
+				C78A574D29911C66009CEAA6 /* Notes.swift in Sources */,
 				C745A0BF29237FED000FD8D7 /* ContentView.swift in Sources */,
 				C745A0BD29237FED000FD8D7 /* Finance_exampleApp.swift in Sources */,
 				C7ABFE5C2944957800FFED7F /* FirebaseServices.swift in Sources */,
+				C7B02B652956DF8F00DC1DB9 /* Theme.swift in Sources */,
+				C71897A8294B2D31006FBA27 /* Widgets.swift in Sources */,
+				C78A574F29911DDE009CEAA6 /* NotesModel.swift in Sources */,
 				C76EDCF4294A05560056030E /* PayBillView.swift in Sources */,
+				C724BCB22966FA92002BE7FC /* AppModel.swift in Sources */,
+				C78A575129912BEF009CEAA6 /* CreateNote.swift in Sources */,
 				C779832C2935E39800AEDD24 /* Constants.swift in Sources */,
 				C77983302936142000AEDD24 /* AddTransactionView.swift in Sources */,
 				C7A002EC29432AFA00CE9DDA /* TransactionView.swift in Sources */,
+				C7B02B632956DE2200DC1DB9 /* AppStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,12 +329,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Finance_example/Preview Content\"";
-				DEVELOPMENT_TEAM = B7SQ5F6Q8K;
+				DEVELOPMENT_TEAM = J4ZHKB4N9X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Finance Example";
+				INFOPLIST_KEY_CFBundleDisplayName = "Luchha App";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -317,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Finance-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -332,12 +360,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Finance_example/Preview Content\"";
-				DEVELOPMENT_TEAM = B7SQ5F6Q8K;
+				DEVELOPMENT_TEAM = J4ZHKB4N9X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Finance Example";
+				INFOPLIST_KEY_CFBundleDisplayName = "Luchha App";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -348,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "test.Finance-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

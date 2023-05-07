@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AddTransactionView: View {
-    let name:String
+    let myId:String
+    let otherId:String
     @Environment(\.presentationMode) var presentationMode
     
     @State var amount = ""
@@ -34,22 +35,21 @@ struct AddTransactionView: View {
                     }
                 }
                 Spacer()
-                    .frame(height: 50)
-                VStack{
-                    Text(name.prefix(1))
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(.blue)
-                        .clipShape(Circle())
-                        .frame(maxWidth: .infinity, alignment: .center)
-                    Text(name)
-                        .fontWeight(.bold)
-                }
-                .padding()
+                    .frame(height: 80)
+                Text("Paying \(otherId)")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+           HStack{
+               PersonTile(color: .blue, name: myId, isSelected: false)
+               Image(systemName: "arrowshape.right")
+                   .font(.largeTitle)
+                   .foregroundColor(.gray)
+               PersonTile(color: .purple, name: otherId, isSelected: false)
+           }
+           .padding(.horizontal)
                 HStack {
                     TextField("Amount in \(rupeeSign)", text: $amount)
+                        .multilineTextAlignment(.center)
                         .padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 14)
@@ -63,6 +63,11 @@ struct AddTransactionView: View {
                 TextField("Reason (Optional)", text: $reason)
                     .padding()
                     .border(.blue)
+                if(!amount.isEmpty){
+                Text("You will owe \(otherId) \(rupeeSign)\(amount) more")
+                    .padding()
+                }
+//                    .border(.blue)
                 //                    .padding(20)
                 //                    .overlay(
                 //                        RoundedRectangle(cornerRadius: 14)
@@ -81,7 +86,6 @@ struct AddTransactionView: View {
                     .cornerRadius(15)
                     .padding()
                 }.frame(maxWidth: .infinity, alignment: .center)
-                
                     .alert("\(alertMessage)", isPresented: Binding(get: {!alertMessage.isEmpty}, set: {
                         newValue in
                         self.alertMessage = ""
@@ -94,17 +98,21 @@ struct AddTransactionView: View {
     func onClick()
     {
         Task {
-            
+            var finalAmount = Int(amount) ?? 0
             if(amount.isEmpty){
                 alertMessage = "No amount entered"
                 return;
+            }else if (finalAmount < 1){
+                alertMessage = "Incorrect Amount entered"
+                return;
             }
+            finalAmount.negate()
             isLoading = true;
-            let timeStamp = Date().formatted(date: .abbreviated, time: .shortened)
-            let model = TransactionModel(amount: Int(amount) ?? 0, timeStamp: timeStamp, name: name, reason: reason)
+            let timeStamp:Double = Date().timeIntervalSince1970
+                //.formatted(date: .abbreviated, time: .shortened)
+            let model = TransactionModel(amount: finalAmount, timeStamp: timeStamp, name: myId, reason: reason)
             await FirebaseServices().uploadTransaction(model: model)
             presentationMode.wrappedValue.dismiss()
-            
         }
         isLoading = false;
     }
@@ -112,6 +120,6 @@ struct AddTransactionView: View {
 
 struct AddTransactionView_Previews: PreviewProvider {
     static var previews: some View {
-        AddTransactionView(name: "Gautam")
+        AddTransactionView(myId: "Gautam", otherId: "Khushee")
     }
 }

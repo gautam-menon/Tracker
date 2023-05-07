@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionView: View {
     let myId: String
     let  transactionModel: TransactionModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         
@@ -17,19 +18,22 @@ struct TransactionView: View {
             VStack(spacing: 20) {
                 
                 DetailsTile(title: "Name", content: transactionModel.name);
-                DetailsTile(title: "Amount", content: "\(transactionModel.amount)");
+                DetailsTile(title: "Amount", content: "\(transactionModel.amount.convertToPositive())");
                 if(transactionModel.reason.isTrulyNotEmpty())    { DetailsTile(title: "Reason", content: transactionModel.reason!)}
-                DetailsTile(title: "Date", content: "\(transactionModel.timeStamp)")
+                DetailsTile(title: "Date", content: "\(Date(timeIntervalSince1970:(transactionModel.timeStamp)).formatted(date: .abbreviated, time: .shortened))")
                 if(myId == transactionModel.name){
-                Button(action: {
-                    //   showSheet.toggle()
-                }){
-                    Text("Delete")
-                        .padding(.horizontal)
-                }
-                .padding()
-                .buttonStyle(.borderedProminent)
-                .tint(.red)}
+                    Button(action: {
+                        Task {
+                            await FirebaseServices().deleteTransaction(model: transactionModel)
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }){
+                        Text("Delete")
+                            .padding(.horizontal)
+                    }
+                    .padding()
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)}
             }
             // .navigationTitle("Transaction Details")
             //.font(.caption)

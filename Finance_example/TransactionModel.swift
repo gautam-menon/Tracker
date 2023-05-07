@@ -10,21 +10,15 @@ import FirebaseFirestore
 
 struct TransactionModel:Hashable, Codable{
     
+    static var selectedId:String = "Gautam"
+    
     var amount:Int
-    var timeStamp:String
+    var timeStamp:Double
     var name:String
     var reason:String?
     var documentId:String?
     
-    
-    static func getFormattedData(timeStamp: String)->String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss z"
-        return formatter.date(from: timeStamp)?.formatted(.dateTime) ?? ""
-    }
-    
     static var transactions: [TransactionModel] = []
-    static var totalBalance: Int = 1200
     
     static func addTransaction(model: TransactionModel) async{
         Task {
@@ -49,9 +43,9 @@ struct TransactionModel:Hashable, Codable{
 
 extension TransactionModel{
     static let samples = [
-        TransactionModel(amount: 100, timeStamp: "26/10/22", name: "Gautam", reason: "Movie", documentId: ""),
-        TransactionModel(amount: 150, timeStamp: "23/11/22", name: "Bob", documentId: ""),
-        TransactionModel(amount: 120, timeStamp: "21/12/22", name: "You",reason: "Food", documentId: ""),
-        TransactionModel(amount: 120, timeStamp: "21/12/22", name: "You",reason: "Food", documentId: ""),
+        TransactionModel(amount: 100, timeStamp: 234, name: "Gautam", reason: "Movie", documentId: ""),
+        TransactionModel(amount: 150, timeStamp: 324, name: "Bob", documentId: ""),
+        TransactionModel(amount: 120, timeStamp:234, name: "You",reason: "Food", documentId: ""),
+        TransactionModel(amount: 120, timeStamp: 23432, name: "You",reason: "Food", documentId: ""),
     ]
 }
